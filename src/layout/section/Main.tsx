@@ -22,8 +22,7 @@ const StyleMain = styled.div`
   min-height: 100vh;
 `
 const Photo = styled.img`
-  width: 350px;
-  e
+  width: 350px;  
   height: 430px;
   top: 296px;
   left: 940px;`
