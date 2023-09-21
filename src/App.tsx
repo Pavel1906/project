@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import styled from "styled-components";
 import {Header} from "./layout/header/Header";
-import {Main} from "./layout/section/Main";
+import {Main} from "./layout/section/Main/Main";
+import {Works} from "./layout/section/works/Works";
 import {Skills} from "./layout/skills/Skills";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
             <Header/>
             <Main/>
             <Skills/>
+            <Works/>
         </div>
     );
 }
