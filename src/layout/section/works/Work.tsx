@@ -1,18 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
 
-type WorkPropdType ={
-    title:string;
-    text:string;
-    src:string;
-}
-
-export const Work = (props:WorkPropdType) => {
+export const Work = () => {
     return (
         <StyledWork>
-            <Image src={props. src}alt=''/>
-            <Title>{props.title}</Title>
-            <Text>{props.text}</Text>
+            <Image src="" alt=''/>
+            <Title></Title>
+            <Text></Text>
             <Link href={"#"}> Demo </Link>
             <Link href={"#"}> code </Link>
         </StyledWork>
@@ -20,16 +14,12 @@ export const Work = (props:WorkPropdType) => {
 };
 
 const StyledWork = styled.div`
-background-color: yellow;
-  max-width: 540px;
-  width: 100%;
+
 `
 
 
 const Image = styled.img`
-    width: 100%;
-height: 260px;
-  object-fit: cover;
+
 `
 
 const Link = styled.a`
