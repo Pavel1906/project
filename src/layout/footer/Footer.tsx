@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <FlexWrapper direction={"column"} align={"center"} >
-                <Name>Pavel</Name>
+                <Name>Goltsov Pavel</Name>
                 <SocialList>
                     <SocialItem>
                         <SocialLink>
