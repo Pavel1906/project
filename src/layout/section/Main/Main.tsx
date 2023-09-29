@@ -18,7 +18,7 @@ export const Main = () => {
         </StyleMain>
     );
 };
-const StyleMain = styled.div`
+const StyleMain = styled.section`
   min-height: 100vh;
 `
 const Photo = styled.img`
