@@ -3,19 +3,22 @@ import photo from "../../../assets/img/photo.jpg"
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
     return (
         <StyleMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-around"}>
+                <FlexWrapper align={"center"} justify={"space-between"}>
                     <div>
-                        <span>Hi There</span>
-                        <Name>I am Pavel Goltsov</Name>
+                        <SmallText>Hi There</SmallText>
+                        <Name>I am <span>Pavel Goltsov</span> </Name>
                         <MainTitle>A Web Developer (junior). </MainTitle>
                     </div>
+                    <PhotoWrapper>
+                        <Photo src={photo} alt=""/>
+                    </PhotoWrapper>
 
-                    <Photo src={photo} alt=""/>
                 </FlexWrapper>
             </Container>
 
@@ -23,8 +26,32 @@ export const Main = () => {
         </StyleMain>
     );
 };
+
+const SmallText = styled.h2`
+  font-size: 14px;
+  font-weight: 400;
+
+
+`
+const PhotoWrapper = styled.div`
+   position: relative;
+  z-index: 0 ;
+  &::before{
+    content: "";
+    width: 360px;
+    height:  470px;
+    border: 5px solid ${theme.colors.accent};
+    
+    position: absolute;
+    top: -24px;
+    left: 24px;
+    z-index: -1;
+  }
+`
+
 const StyleMain = styled.section`
   min-height: 100vh;
+  display: flex;
 `
 const Photo = styled.img`
   width: 350px;
@@ -33,8 +60,32 @@ const Photo = styled.img`
   left: 940px;`
 
 const MainTitle = styled.h1`
+  font-size: 27px;
+  font-weight: 400;
 
 `
 const Name = styled.h2`
+  font-family: Josefin Sans sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 10px 0;
+
+  span {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 20px;
+      background-color: ${theme.colors.accent};
+
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
 
 `
