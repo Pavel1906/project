@@ -39,7 +39,6 @@ const Link = styled.a`
   font-family: Josefin Sans sans-serif;
   font-weight: 400;
   font-size: 30px;
-  color: #7572D5;
   text-align: center;
   color: transparent;
 
@@ -51,7 +50,7 @@ const Mask = styled.span`
   display: inline-block;
   height: 50%;
   overflow-y: hidden;
-   //outline: 1px solid red ;
+  //outline: 1px solid red ;
   color: ${theme.colors.accent};
 
   & + & {
@@ -82,12 +81,14 @@ const ListItem = styled.li`
   }
 
   &:hover {
-    &::before{
+    &::before {
       transform: scale(1);
     }
+
     ${Mask} {
       transform: skewX(12deg) translateX(5px);
-color: ${theme.colors.font};
+      color: ${theme.colors.font};
+
       & + ${Mask} {
         transform: skewX(12deg) translateX(-5px);
       }
